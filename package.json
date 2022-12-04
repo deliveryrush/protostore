@@ -4,5 +4,8 @@
   "description": "",
   "author": "",
   "private": true,
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "@deliveryrush:registry": "https://npm.pkg.github.com"
+  }
 }
