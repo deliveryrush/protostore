@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package limiter;
+
+service LimiterService {
+  rpc IsAllowed(Request) returns (Response) {}
+}
+
+message Request {
+  string requestId = 1;
+  optional string serviceId = 2;
+  int32 maxAttemptsNumber = 3;
+  int32 timeInterval = 4;
+}
+
+message Response {
+  bool isAllowed = 1;
+}

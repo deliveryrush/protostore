@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+
+package Logger;
+
+service LoggerService {
+  rpc Log(Request) returns (google.protobuf.Empty) {}
+}
+
+message Request {
+  string traceId = 1;
+  string serviceId = 2;
+  google.protobuf.Any data = 3;
+}
