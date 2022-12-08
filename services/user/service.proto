@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+
+package User;
+
+service UserService {
+  rpc Create(google.protobuf.Empty) returns (User) {}
+  rpc Delete(UserById) returns (google.protobuf.Empty) {}
+  rpc Activate(UserById) returns (google.protobuf.Empty) {}
+  rpc Deactivate(UserById) returns (google.protobuf.Empty) {}
+  rpc Ban(UserById) returns (google.protobuf.Empty) {}
+  rpc Unban(UserById) returns (google.protobuf.Empty) {}
+  rpc List(UserListRequest) returns (UserListResponse) {}
+}
+
+message User {
+  string id = 1;
+  string createdAt = 2;
+  bool isBanned = 3;
+  bool isActive = 4;
+}
+
+message UserById {
+  string id = 1;
+}
+
+message UserListRequest {
+  optional int64 skip = 1;
+}
+
+message UserListResponse {
+  repeated User users = 1;
+}
