@@ -1,9 +1,9 @@
 {
   "name": "@deliveryrush/protostore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "author": "",
-  "private": true,
+  "private": false,
   "license": "UNLICENSED",
   "publishConfig": {
     "@deliveryrush:registry": "https://npm.pkg.github.com"
