@@ -19,8 +19,13 @@ export interface IUserById {
   id: string
 }
 
+export interface IPeriod {
+  from: Date
+  to: Date
+}
+
 export interface IUserListRequest {
-  skip?: number
+  periods?: IPeriod[]
 }
 
 export interface IUserListResponse {
