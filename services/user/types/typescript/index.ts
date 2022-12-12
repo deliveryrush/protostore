@@ -1,11 +1,11 @@
 export interface IUserService {
-  Create: () => IUser
-  Delete: (data: IUserById) => void
-  Activate: (data: IUserById) => void
-  Deactivate: (data: IUserById) => void
-  Ban: (data: IUserById) => void
-  Unban: (data: IUserById) => void
-  List: (data: IUserListRequest) => IUserListResponse
+  Create: () => Promise<IUser>
+  Delete: (data: IUserById) => Promise<boolean>
+  Activate: (data: IUserById) => Promise<boolean>
+  Deactivate: (data: IUserById) => Promise<boolean>
+  Ban: (data: IUserById) => Promise<boolean>
+  Unban: (data: IUserById) => Promise<boolean>
+  List: (data: IUserListRequest) => Promise<IUserListResponse>
 }
 
 export interface IUser {
