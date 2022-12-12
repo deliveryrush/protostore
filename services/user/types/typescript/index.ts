@@ -10,7 +10,7 @@ export interface IUserService {
 
 export interface IUser {
   id: string
-  createdAt: string
+  createdAt: Date
   isBanned: boolean
   isActive: boolean
 }

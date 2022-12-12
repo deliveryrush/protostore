@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "google/protobuf/any.proto";
 import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
 
 package User;
 
@@ -17,7 +18,7 @@ service UserService {
 
 message User {
   string id = 1;
-  string createdAt = 2;
+  google.protobuf.Timestamp createdAt = 2;
   bool isBanned = 3;
   bool isActive = 4;
 }
