@@ -25,7 +25,10 @@ export interface IPeriod {
 }
 
 export interface IUserListRequest {
-  periods?: IPeriod[]
+  selection?: {
+    skip: number
+    take: number
+  }
 }
 
 export interface IUserListResponse {
