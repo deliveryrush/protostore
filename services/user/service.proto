@@ -38,4 +38,5 @@ message UserListRequest {
 
 message UserListResponse {
   repeated User users = 1;
+  int64 count = 2;
 }

@@ -26,11 +26,12 @@ export interface IPeriod {
 
 export interface IUserListRequest {
   selection?: {
-    skip: number
-    take: number
+    skip: bigint
+    take: bigint
   }
 }
 
 export interface IUserListResponse {
   users: IUser[]
+  count: bigint
 }
