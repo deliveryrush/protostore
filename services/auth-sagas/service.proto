@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package AuthSagas;
+
+service AuthSagas {
+  rpc register(RegisterRequest) returns (RegisterResponse) {}
+  rpc login(LoginRequest) returns (LoginResponse) {}
+}
+
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string fullname = 3;
+}
+
+message RegisterResponse {
+  bool isRegistered = 1;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  bool refreshToken = 1;
+}
